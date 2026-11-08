@@ -1,3 +1,14 @@
 /* Lodging-first chooser and interior/exterior wayfinding. */
 .stay-chooser{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}.stay-panel{display:block;background:var(--cream,#f4efe4);color:var(--navy,#172d38);text-decoration:none;overflow:hidden;border:1px solid rgba(23,45,56,.16)}.stay-panel>img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover}.stay-panel>div{padding:26px}.stay-panel h3{font-size:clamp(26px,3vw,38px);margin:0 0 12px}.stay-panel p{margin:0;font-size:18px}.stay-panel:hover img{filter:brightness(1.04)}.stay-panel:focus-visible{outline:3px solid #9b806b;outline-offset:5px}.cross-explore .text-link{display:inline-block;margin:20px}.fore-section h1,.rooms h1{font-size:clamp(36px,5vw,68px);line-height:1.08;margin:12px 0 24px}.chooser-section .section-top p{max-width:44rem}.footer-nav{flex-wrap:wrap}
 @media(max-width:600px){.stay-chooser{grid-template-columns:1fr;gap:24px}.stay-panel>div{padding:22px}.stay-panel p{font-size:18px}.cross-explore .text-link{display:block;margin:24px 0}.chooser-section{padding-top:38px;padding-bottom:38px}}
+
+/* Home hero: club name over city; tighter mobile hero */
+.page-home .hero .eyebrow.hero-place{display:block;margin-bottom:26px}
+.page-home .hero .hero-place .hero-club{display:block;font-size:22px!important;letter-spacing:.12em;line-height:1.3!important}
+.page-home .hero .hero-place .hero-city{display:block;font-size:13px!important;letter-spacing:.16em;line-height:1.5!important;margin-top:6px;opacity:.85}
+@media(max-width:600px){
+.page-home .hero{height:auto!important;min-height:0!important}
+.page-home .hero-content{padding-top:56px!important;padding-bottom:96px!important}
+.page-home .hero .hero-place .hero-club{font-size:19px!important}
+.page-home .hero .hero-place .hero-city{font-size:12px!important}
+}
