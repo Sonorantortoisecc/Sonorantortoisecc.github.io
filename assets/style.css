@@ -63,3 +63,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
 @media(max-width:600px){.page-home .hero-image{object-position:38% 50%}.page-home .editorial-photo,.page-home .editorial-photo>img{height:auto;min-height:0;aspect-ratio:3/2}.page-home .editorial-photo>img{object-fit:cover}}
 
 .amenities{padding-top:0}.amenities .experience-grid{row-gap:50px}.amenities .experience-grid img{width:100%;height:300px;object-fit:cover}@media(max-width:600px){.amenities .experience-grid img{height:300px}}
+
+/* Nearby golf: text-only companion to The Fore cards. */
+.nearby-golf{padding-top:40px}.nearby-golf .golf-intro{max-width:680px;color:var(--muted);margin-bottom:32px}.nearby-golf .golf-card>div{display:flex;flex-direction:column;height:100%;gap:16px}.nearby-golf .golf-card h3{margin-bottom:0}.nearby-golf .golf-card p{margin:0;font-size:16px;line-height:1.65}.nearby-golf .golf-card .meta{color:var(--olive);font-size:12px;font-weight:600;letter-spacing:.03em}.nearby-golf .golf-card .text-link{align-self:flex-start;margin-top:auto}.nearby-golf .fore-bottom .text-link{flex-shrink:0}
