@@ -61,3 +61,5 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
 .page-home .hero-image{object-position:45% 50%}
 .page-home .editorial-photo>img{object-position:center 65%}
 @media(max-width:600px){.page-home .hero-image{object-position:38% 50%}.page-home .editorial-photo,.page-home .editorial-photo>img{height:auto;min-height:0;aspect-ratio:3/2}.page-home .editorial-photo>img{object-fit:cover}}
+
+.amenities{padding-top:0}.amenities .experience-grid{row-gap:50px}.amenities .experience-grid img{width:100%;height:300px;object-fit:cover}@media(max-width:600px){.amenities .experience-grid img{height:300px}}
