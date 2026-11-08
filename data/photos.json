@@ -1,0 +1,609 @@
+[
+  {
+    "src": "/assets/photos/bedrooms/cane-headboard-bedroom-blue-bedding-window.webp",
+    "thumb": "/assets/photos/bedrooms/cane-headboard-bedroom-blue-bedding-window-thumb.webp",
+    "room": "bedrooms",
+    "name": "cane-headboard-bedroom-blue-bedding-window",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Blue bedding and desert-patterned wallpaper",
+    "alt_text": "Bedroom with a cane headboard, blue bedding, desert-patterned wallpaper and a curtained window."
+  },
+  {
+    "src": "/assets/photos/bedrooms/cane-headboard-bedroom-mirrored-closet.webp",
+    "thumb": "/assets/photos/bedrooms/cane-headboard-bedroom-mirrored-closet-thumb.webp",
+    "room": "bedrooms",
+    "name": "cane-headboard-bedroom-mirrored-closet",
+    "width": 2000,
+    "height": 1333,
+    "caption": "A restful room with a mirrored closet",
+    "alt_text": "Bed with blue bedding and a cane headboard beside mirrored sliding closet doors."
+  },
+  {
+    "src": "/assets/photos/bedrooms/cane-headboard-bedside-lamp-desert-wallpaper.webp",
+    "thumb": "/assets/photos/bedrooms/cane-headboard-bedside-lamp-desert-wallpaper-thumb.webp",
+    "room": "bedrooms",
+    "name": "cane-headboard-bedside-lamp-desert-wallpaper",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Desert wallpaper and bedside details",
+    "alt_text": "Close view of a cane headboard, blue pillows, bedside lamp and desert-patterned wallpaper."
+  },
+  {
+    "src": "/assets/photos/bunk-room/metal-bunk-beds-tv-green-rug.webp",
+    "thumb": "/assets/photos/bunk-room/metal-bunk-beds-tv-green-rug-thumb.webp",
+    "room": "bunk-room",
+    "name": "metal-bunk-beds-tv-green-rug",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Bunks, a bright green rug and room to unwind",
+    "alt_text": "Two metal bunk beds, a wall-mounted television, pink curtains and a green rug."
+  },
+  {
+    "src": "/assets/photos/bunk-room/bunk-beds-boot-wallpaper-string-lights.webp",
+    "thumb": "/assets/photos/bunk-room/bunk-beds-boot-wallpaper-string-lights-thumb.webp",
+    "room": "bunk-room",
+    "name": "bunk-beds-boot-wallpaper-string-lights",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Boot-print wallpaper and glowing string lights",
+    "alt_text": "Two metal bunk beds face a boot-patterned wall beside white string lights."
+  },
+  {
+    "src": "/assets/photos/bunk-room/lower-bunk-howdy-pillows-string-lights.webp",
+    "thumb": "/assets/photos/bunk-room/lower-bunk-howdy-pillows-string-lights-thumb.webp",
+    "room": "bunk-room",
+    "name": "lower-bunk-howdy-pillows-string-lights",
+    "width": 2000,
+    "height": 1333,
+    "caption": "A cozy lower bunk with Howdy pillows",
+    "alt_text": "Lower bunk with golf and Howdy accent pillows beneath white string lights."
+  },
+  {
+    "src": "/assets/photos/dining/wood-dining-table-green-wallpaper-board-games.webp",
+    "thumb": "/assets/photos/dining/wood-dining-table-green-wallpaper-board-games-thumb.webp",
+    "room": "dining",
+    "name": "wood-dining-table-green-wallpaper-board-games",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Gather around the dining table",
+    "alt_text": "Wood dining table with dark chairs, green patterned wallpaper and board games on a console."
+  },
+  {
+    "src": "/assets/photos/dining/dining-table-coffee-station-kitchen-view.webp",
+    "thumb": "/assets/photos/dining/dining-table-coffee-station-kitchen-view-thumb.webp",
+    "room": "dining",
+    "name": "dining-table-coffee-station-kitchen-view",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Dining with the coffee station close by",
+    "alt_text": "Long wood dining table facing a coffee station, with the kitchen and living room beyond."
+  },
+  {
+    "src": "/assets/photos/dining/dining-room-desert-art-patio-doors.webp",
+    "thumb": "/assets/photos/dining/dining-room-desert-art-patio-doors-thumb.webp",
+    "room": "dining",
+    "name": "dining-room-desert-art-patio-doors",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Desert art and a view toward the patio",
+    "alt_text": "Dining table beneath a glass pendant light, with desert artwork and sliding patio doors."
+  },
+  {
+    "src": "/assets/photos/kitchen/coffee-station-brewers-blue-tile-kitchen.webp",
+    "thumb": "/assets/photos/kitchen/coffee-station-brewers-blue-tile-kitchen-thumb.webp",
+    "room": "kitchen",
+    "name": "coffee-station-brewers-blue-tile-kitchen",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Your morning coffee corner",
+    "alt_text": "Coffee station with drip and pod brewers beside wood kitchen cabinets and a blue tile backsplash."
+  },
+  {
+    "src": "/assets/photos/kitchen/kitchen-sink-blue-tile-pool-view.webp",
+    "thumb": "/assets/photos/kitchen/kitchen-sink-blue-tile-pool-view-thumb.webp",
+    "room": "kitchen",
+    "name": "kitchen-sink-blue-tile-pool-view",
+    "width": 2000,
+    "height": 1333,
+    "caption": "A pool view from the kitchen sink",
+    "alt_text": "Kitchen sink and black faucet framed by blue herringbone tile, overlooking the pool and grill."
+  },
+  {
+    "src": "/assets/photos/dining/breakfast-table-place-settings-pool-view.webp",
+    "thumb": "/assets/photos/dining/breakfast-table-place-settings-pool-view-thumb.webp",
+    "room": "dining",
+    "name": "breakfast-table-place-settings-pool-view",
+    "width": 2000,
+    "height": 1334,
+    "caption": "Breakfast with a backyard view",
+    "alt_text": "Dark breakfast table set with bowls and plates in front of a large window overlooking the pool."
+  },
+  {
+    "src": "/assets/photos/laundry/front-load-washer-dryer-laundry-shelves.webp",
+    "thumb": "/assets/photos/laundry/front-load-washer-dryer-laundry-shelves-thumb.webp",
+    "room": "laundry",
+    "name": "front-load-washer-dryer-laundry-shelves",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Laundry, tucked neatly away",
+    "alt_text": "White front-loading washer and dryer beneath open shelves in a small laundry room."
+  },
+  {
+    "src": "/assets/photos/living-room/navy-living-room-green-armchairs-golf-wall.webp",
+    "thumb": "/assets/photos/living-room/navy-living-room-green-armchairs-golf-wall-thumb.webp",
+    "room": "living-room",
+    "name": "navy-living-room-green-armchairs-golf-wall",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Navy walls and a golf-inspired lounge",
+    "alt_text": "Living room with green armchairs, two sofas, a game on the coffee table and crossed golf clubs on a wood-slat wall."
+  },
+  {
+    "src": "/assets/photos/living-room/black-sofa-monopoly-crossed-golf-clubs.webp",
+    "thumb": "/assets/photos/living-room/black-sofa-monopoly-crossed-golf-clubs-thumb.webp",
+    "room": "living-room",
+    "name": "black-sofa-monopoly-crossed-golf-clubs",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Settle in for a board-game night",
+    "alt_text": "Black sofa behind a coffee table set with Monopoly, beneath crossed golf clubs on wood slats."
+  },
+  {
+    "src": "/assets/photos/living-room/living-room-sofas-green-chairs-desert-art.webp",
+    "thumb": "/assets/photos/living-room/living-room-sofas-green-chairs-desert-art-thumb.webp",
+    "room": "living-room",
+    "name": "living-room-sofas-green-chairs-desert-art",
+    "width": 2000,
+    "height": 1333,
+    "caption": "A wide view of the clubhouse lounge",
+    "alt_text": "Wide view of a navy living room with green chairs, black and gray sofas, desert art and tall windows."
+  },
+  {
+    "src": "/assets/photos/bathrooms/wood-vanity-round-mirror-blue-tile-shower.webp",
+    "thumb": "/assets/photos/bathrooms/wood-vanity-round-mirror-blue-tile-shower-thumb.webp",
+    "room": "bathrooms",
+    "name": "wood-vanity-round-mirror-blue-tile-shower",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Wood cabinetry meets blue tile",
+    "alt_text": "Bathroom vanity with a round mirror beside a glass-enclosed blue tile shower."
+  },
+  {
+    "src": "/assets/photos/bathrooms/bathroom-vanity-round-mirror-longhorn-decor.webp",
+    "thumb": "/assets/photos/bathrooms/bathroom-vanity-round-mirror-longhorn-decor-thumb.webp",
+    "room": "bathrooms",
+    "name": "bathroom-vanity-round-mirror-longhorn-decor",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Round mirror and a touch of Western style",
+    "alt_text": "White bathroom countertop with a black faucet, round mirror, folded towels and longhorn wall decor."
+  },
+  {
+    "src": "/assets/photos/bathrooms/blue-tile-glass-shower-square-head.webp",
+    "thumb": "/assets/photos/bathrooms/blue-tile-glass-shower-square-head-thumb.webp",
+    "room": "bathrooms",
+    "name": "blue-tile-glass-shower-square-head",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Blue tile and a glass shower enclosure",
+    "alt_text": "Glass-enclosed shower with blue tile, a square black showerhead, recessed toiletries and a window."
+  },
+  {
+    "src": "/assets/photos/bedrooms/golf-bedroom-wood-slat-wall-navy-rug.webp",
+    "thumb": "/assets/photos/bedrooms/golf-bedroom-wood-slat-wall-navy-rug-thumb.webp",
+    "room": "bedrooms",
+    "name": "golf-bedroom-wood-slat-wall-navy-rug",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Golf-inspired style and a navy patterned rug",
+    "alt_text": "Bedroom with green bedding, a wood-slat wall, crossed golf clubs, a leather bench and a navy geometric rug."
+  },
+  {
+    "src": "/assets/photos/bedrooms/green-bedding-fore-pillow-leather-bench.webp",
+    "thumb": "/assets/photos/bedrooms/green-bedding-fore-pillow-leather-bench-thumb.webp",
+    "room": "bedrooms",
+    "name": "green-bedding-fore-pillow-leather-bench",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Green bedding, a Fore pillow and warm wood",
+    "alt_text": "Bed with green bedding and a Fore accent pillow, backed by wood slats and crossed golf clubs."
+  },
+  {
+    "src": "/assets/photos/living-room/welcome-to-the-club-banner-lounge-doorway.webp",
+    "thumb": "/assets/photos/living-room/welcome-to-the-club-banner-lounge-doorway-thumb.webp",
+    "room": "living-room",
+    "name": "welcome-to-the-club-banner-lounge-doorway",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Welcome to the Club",
+    "alt_text": "Welcome to the Club golf banner on a doorway beside the navy living room and crossed-club wall display."
+  },
+  {
+    "src": "/assets/photos/indoor-mini-golf/indoor-putting-green-sonoran-country-club-mural.webp",
+    "thumb": "/assets/photos/indoor-mini-golf/indoor-putting-green-sonoran-country-club-mural-thumb.webp",
+    "room": "indoor-mini-golf",
+    "name": "indoor-putting-green-sonoran-country-club-mural",
+    "width": 2000,
+    "height": 1333,
+    "caption": "A first round beneath the SCC mural",
+    "alt_text": "Indoor putting green with three flags beneath a Sonoran Country Club desert mural featuring a turtle golfer.",
+    "tags": [
+      "the-fore",
+      "indoor-practice"
+    ]
+  },
+  {
+    "src": "/assets/photos/indoor-mini-golf/desert-mural-indoor-mini-golf-dining-doorway.webp",
+    "thumb": "/assets/photos/indoor-mini-golf/desert-mural-indoor-mini-golf-dining-doorway-thumb.webp",
+    "room": "indoor-mini-golf",
+    "name": "desert-mural-indoor-mini-golf-dining-doorway",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Desert colors and indoor putting",
+    "alt_text": "Angled view of an indoor putting green and SCC desert mural, with the dining room through a doorway.",
+    "tags": [
+      "the-fore",
+      "indoor-practice"
+    ]
+  },
+  {
+    "src": "/assets/photos/indoor-mini-golf/indoor-mini-golf-putters-balls-mascot-mural.webp",
+    "thumb": "/assets/photos/indoor-mini-golf/indoor-mini-golf-putters-balls-mascot-mural-thumb.webp",
+    "room": "indoor-mini-golf",
+    "name": "indoor-mini-golf-putters-balls-mascot-mural",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Putters ready beneath the club mascot",
+    "alt_text": "Putters and colored golf balls on an indoor green beneath a large SCC turtle golfer mural.",
+    "tags": [
+      "the-fore",
+      "indoor-practice"
+    ]
+  },
+  {
+    "src": "/assets/photos/exterior/navy-brick-house-desert-landscaping-day.webp",
+    "thumb": "/assets/photos/exterior/navy-brick-house-desert-landscaping-day-thumb.webp",
+    "room": "exterior",
+    "name": "navy-brick-house-desert-landscaping-day",
+    "width": 2000,
+    "height": 1500,
+    "caption": "The clubhouse from the street",
+    "alt_text": "Single-story navy brick house with gravel landscaping, clipped shrubs and a tree in daylight."
+  },
+  {
+    "src": "/assets/photos/exterior/sage-green-entry-door-scc-mural-view.webp",
+    "thumb": "/assets/photos/exterior/sage-green-entry-door-scc-mural-view-thumb.webp",
+    "room": "exterior",
+    "name": "sage-green-entry-door-scc-mural-view",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Step through the sage-green entry",
+    "alt_text": "Open sage-green front doorway with glass sidelights, showing the SCC mural and indoor putting green."
+  },
+  {
+    "src": "/assets/photos/hot-tub/hot-tub-covered-patio-dining-day.webp",
+    "thumb": "/assets/photos/hot-tub/hot-tub-covered-patio-dining-day-thumb.webp",
+    "room": "hot-tub",
+    "name": "hot-tub-covered-patio-dining-day",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Hot tub beside the covered patio",
+    "alt_text": "Outdoor hot tub with its cover raised beside a covered dining patio and wall-mounted television in daylight."
+  },
+  {
+    "src": "/assets/photos/pool/pool-blue-loungers-volleyball-net-day.webp",
+    "thumb": "/assets/photos/pool/pool-blue-loungers-volleyball-net-day-thumb.webp",
+    "room": "pool",
+    "name": "pool-blue-loungers-volleyball-net-day",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Blue loungers around the pool",
+    "alt_text": "Backyard pool with blue loungers, a volleyball net, a poolside basketball hoop and a desert wall mural."
+  },
+  {
+    "src": "/assets/photos/pool/pool-basketball-hoop-beach-balls-loungers.webp",
+    "thumb": "/assets/photos/pool/pool-basketball-hoop-beach-balls-loungers-thumb.webp",
+    "room": "pool",
+    "name": "pool-basketball-hoop-beach-balls-loungers",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Pool games in the sunshine",
+    "alt_text": "Pool with floating beach balls, a basketball hoop and volleyball net, with blue loungers under an umbrella."
+  },
+  {
+    "src": "/assets/photos/outdoor-games/cornhole-fire-pit-chairs-poolside-turf.webp",
+    "thumb": "/assets/photos/outdoor-games/cornhole-fire-pit-chairs-poolside-turf-thumb.webp",
+    "room": "outdoor-games",
+    "name": "cornhole-fire-pit-chairs-poolside-turf",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Lawn games beside the pool",
+    "alt_text": "Cornhole board on artificial turf beside blue chairs around a fire pit, with a pool and putting area beyond."
+  },
+  {
+    "src": "/assets/photos/patio-bar/wood-patio-bar-cactus-back-stools.webp",
+    "thumb": "/assets/photos/patio-bar/wood-patio-bar-cactus-back-stools-thumb.webp",
+    "room": "patio-bar",
+    "name": "wood-patio-bar-cactus-back-stools",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Pull up a cactus-backed stool",
+    "alt_text": "Wood outdoor bar with cactus-shaped chair backs against a dark brick wall under the covered patio."
+  },
+  {
+    "src": "/assets/photos/outdoor-mini-golf/backyard-mini-golf-green-number-three-markers.webp",
+    "thumb": "/assets/photos/outdoor-mini-golf/backyard-mini-golf-green-number-three-markers-thumb.webp",
+    "room": "outdoor-mini-golf",
+    "name": "backyard-mini-golf-green-number-three-markers",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Hole 3 \u00b7 A blue-tee challenge by the patio.",
+    "alt_text": "Hole 3 mini-golf lane with blue number-three tee markers, white sand-style insets and the covered patio beyond.",
+    "hole": 3,
+    "tee_color": "blue",
+    "tags": [
+      "the-fore"
+    ]
+  },
+  {
+    "src": "/assets/photos/grill/outdoor-gas-grill-navy-brick-wall.webp",
+    "thumb": "/assets/photos/grill/outdoor-gas-grill-navy-brick-wall-thumb.webp",
+    "room": "grill",
+    "name": "outdoor-gas-grill-navy-brick-wall",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Ready for a backyard cookout",
+    "alt_text": "Gas grill with side shelves beside the navy brick house, with part of a painted sport court visible beyond."
+  },
+  {
+    "src": "/assets/photos/exterior/sunset-aerial-house-pool-sport-court.webp",
+    "thumb": "/assets/photos/exterior/sunset-aerial-house-pool-sport-court-thumb.webp",
+    "room": "exterior",
+    "name": "sunset-aerial-house-pool-sport-court",
+    "width": 2000,
+    "height": 1125,
+    "caption": "The backyard from above at sunset",
+    "alt_text": "Sunset aerial view of the house, pool, turf yard and painted sport court within the surrounding neighborhood."
+  },
+  {
+    "src": "/assets/photos/exterior/twilight-aerial-corner-house-backyard.webp",
+    "thumb": "/assets/photos/exterior/twilight-aerial-corner-house-backyard-thumb.webp",
+    "room": "exterior",
+    "name": "twilight-aerial-corner-house-backyard",
+    "width": 2000,
+    "height": 1125,
+    "caption": "The corner-lot clubhouse at twilight",
+    "alt_text": "Aerial view of the corner-lot house and enclosed pool yard, with neighborhood streets and distant mountains at twilight."
+  },
+  {
+    "src": "/assets/photos/pool/sunset-pool-reflections-covered-patio-string-lights.webp",
+    "thumb": "/assets/photos/pool/sunset-pool-reflections-covered-patio-string-lights-thumb.webp",
+    "room": "pool",
+    "name": "sunset-pool-reflections-covered-patio-string-lights",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Sunset reflected across the pool",
+    "alt_text": "Pool reflecting the sunset beside blue loungers, a volleyball net and a covered patio with string lights."
+  },
+  {
+    "src": "/assets/photos/pool/twilight-pool-umbrella-loungers-patio.webp",
+    "thumb": "/assets/photos/pool/twilight-pool-umbrella-loungers-patio-thumb.webp",
+    "room": "pool",
+    "name": "twilight-pool-umbrella-loungers-patio",
+    "width": 2000,
+    "height": 1333,
+    "caption": "An easy evening by the pool",
+    "alt_text": "Twilight pool view with umbrella-shaded loungers, a volleyball net and the illuminated covered patio beyond."
+  },
+  {
+    "src": "/assets/photos/hot-tub/open-hot-tub-pink-twilight-sky.webp",
+    "thumb": "/assets/photos/hot-tub/open-hot-tub-pink-twilight-sky-thumb.webp",
+    "room": "hot-tub",
+    "name": "open-hot-tub-pink-twilight-sky",
+    "width": 2000,
+    "height": 1333,
+    "caption": "A hot-tub pause under a pink sky",
+    "alt_text": "Open outdoor hot tub with its cover raised against a block wall beneath a pink twilight sky."
+  },
+  {
+    "src": "/assets/photos/exterior/navy-brick-front-house-illuminated-entry-dusk.webp",
+    "thumb": "/assets/photos/exterior/navy-brick-front-house-illuminated-entry-dusk-thumb.webp",
+    "room": "exterior",
+    "name": "navy-brick-front-house-illuminated-entry-dusk",
+    "width": 2000,
+    "height": 1333,
+    "caption": "The front entry after sunset",
+    "alt_text": "Navy brick house at dusk with an illuminated front entry, glowing windows and gravel landscaping."
+  },
+  {
+    "src": "/assets/photos/pool/illuminated-pool-blue-loungers-evening.webp",
+    "thumb": "/assets/photos/pool/illuminated-pool-blue-loungers-evening-thumb.webp",
+    "room": "pool",
+    "name": "illuminated-pool-blue-loungers-evening",
+    "width": 2000,
+    "height": 1333,
+    "caption": "The pool lights come on",
+    "alt_text": "Illuminated backyard pool at dusk with a volleyball net, basketball hoop and blue loungers topped with towels."
+  },
+  {
+    "src": "/assets/photos/hot-tub/blue-lit-hot-tub-patio-dining-night.webp",
+    "thumb": "/assets/photos/hot-tub/blue-lit-hot-tub-patio-dining-night-thumb.webp",
+    "room": "hot-tub",
+    "name": "blue-lit-hot-tub-patio-dining-night",
+    "width": 2000,
+    "height": 1333,
+    "caption": "An evening soak beside the patio",
+    "alt_text": "Blue-lit outdoor hot tub beside a covered dining patio with a television, string lights and glowing wall sconces at night."
+  },
+  {
+    "src": "/assets/photos/game-room/red-green-game-table-golf-posters-tv.webp",
+    "thumb": "/assets/photos/game-room/red-green-game-table-golf-posters-tv-thumb.webp",
+    "room": "game-room",
+    "name": "red-green-game-table-golf-posters-tv",
+    "width": 2000,
+    "height": 1333,
+    "caption": "A colorful game table in the navy lounge",
+    "alt_text": "Red and green game table with a net, paddles and a yellow ball in a navy room with golf posters and a television."
+  },
+  {
+    "src": "/assets/photos/game-room/game-table-paddles-cowboy-sign-tv.webp",
+    "thumb": "/assets/photos/game-room/game-table-paddles-cowboy-sign-tv-thumb.webp",
+    "room": "game-room",
+    "name": "game-table-paddles-cowboy-sign-tv",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Paddles ready for the next round",
+    "alt_text": "Angled view of a red and green game table with paddles, a wall-mounted television, golf posters and a Cowboy sign."
+  },
+  {
+    "src": "/assets/photos/game-room/game-table-scc-mural-lounge-view.webp",
+    "thumb": "/assets/photos/game-room/game-table-scc-mural-lounge-view-thumb.webp",
+    "room": "game-room",
+    "name": "game-table-scc-mural-lounge-view",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Play a round with a view of the mural",
+    "alt_text": "Game table with a net and paddles in a navy room, looking toward the SCC mural and green lounge chairs."
+  },
+  {
+    "src": "/assets/photos/bedrooms/rose-bedroom-black-headboard-cream-curtains.webp",
+    "thumb": "/assets/photos/bedrooms/rose-bedroom-black-headboard-cream-curtains-thumb.webp",
+    "room": "bedrooms",
+    "name": "rose-bedroom-black-headboard-cream-curtains",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Rose walls and soft cream curtains",
+    "alt_text": "Bedroom with rose-colored walls, a black headboard, patterned bedding, cream curtains and knitted poufs."
+  },
+  {
+    "src": "/assets/photos/bedrooms/rose-bedroom-golf-art-mirrored-closet.webp",
+    "thumb": "/assets/photos/bedrooms/rose-bedroom-golf-art-mirrored-closet-thumb.webp",
+    "room": "bedrooms",
+    "name": "rose-bedroom-golf-art-mirrored-closet",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Golf prints above a restful rose retreat",
+    "alt_text": "Bed with patterned bedding beneath three golf prints, beside mirrored closet doors in a rose-colored bedroom."
+  },
+  {
+    "src": "/assets/photos/bedrooms/rose-bedroom-bedside-lamp-knit-poufs.webp",
+    "thumb": "/assets/photos/bedrooms/rose-bedroom-bedside-lamp-knit-poufs-thumb.webp",
+    "room": "bedrooms",
+    "name": "rose-bedroom-bedside-lamp-knit-poufs",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Warm bedside details in the rose room",
+    "alt_text": "Close view of a black headboard, rust accent pillow, bedside lamp and cream knitted poufs against rose walls."
+  },
+  {
+    "src": "/assets/photos/bathrooms/double-sink-vanity-round-mirrors.webp",
+    "thumb": "/assets/photos/bathrooms/double-sink-vanity-round-mirrors-thumb.webp",
+    "room": "bathrooms",
+    "name": "double-sink-vanity-round-mirrors",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Two sinks and round mirrors",
+    "alt_text": "Double-sink bathroom vanity with black faucets, two round mirrors, wood cabinetry and white countertops."
+  },
+  {
+    "src": "/assets/photos/bathrooms/blue-tile-tub-shower-black-fixtures.webp",
+    "thumb": "/assets/photos/bathrooms/blue-tile-tub-shower-black-fixtures-thumb.webp",
+    "room": "bathrooms",
+    "name": "blue-tile-tub-shower-black-fixtures",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Blue tile around the tub and shower",
+    "alt_text": "Bathtub and shower with blue vertical tile, black fixtures and a recessed shelf of toiletries."
+  },
+  {
+    "src": "/assets/photos/bathrooms/bathroom-tub-blue-tile-double-vanity.webp",
+    "thumb": "/assets/photos/bathrooms/bathroom-tub-blue-tile-double-vanity-thumb.webp",
+    "room": "bathrooms",
+    "name": "bathroom-tub-blue-tile-double-vanity",
+    "width": 2000,
+    "height": 1333,
+    "caption": "A full view of the shared bathroom",
+    "alt_text": "Bathroom with a white tub, blue tile surround, shower curtain and double-sink vanity with round mirrors."
+  },
+  {
+    "src": "/assets/photos/outdoor-mini-golf/hole-1-red-tee-desert-mural.webp",
+    "thumb": "/assets/photos/outdoor-mini-golf/hole-1-red-tee-desert-mural-thumb.webp",
+    "room": "outdoor-mini-golf",
+    "name": "hole-1-red-tee-desert-mural",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Hole 1 \u00b7 Start with a little desert drama.",
+    "alt_text": "Hole 1 mini-golf lane with red number-one tee markers, rocks and a desert wall mural.",
+    "hole": 1,
+    "tee_color": "red",
+    "tags": [
+      "the-fore"
+    ]
+  },
+  {
+    "src": "/assets/photos/outdoor-mini-golf/hole-2-white-tee-palm-obstacle.webp",
+    "thumb": "/assets/photos/outdoor-mini-golf/hole-2-white-tee-palm-obstacle-thumb.webp",
+    "room": "outdoor-mini-golf",
+    "name": "hole-2-white-tee-palm-obstacle",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Hole 2 \u00b7 Keep your cool around the palms.",
+    "alt_text": "Hole 2 mini-golf lane with white number-two tee markers, rock obstacles and a decorative palm.",
+    "hole": 2,
+    "tee_color": "white",
+    "tags": [
+      "the-fore"
+    ]
+  },
+  {
+    "src": "/assets/photos/outdoor-mini-golf/mini-golf-course-hole-3-blue-hole-4-black-tees.webp",
+    "thumb": "/assets/photos/outdoor-mini-golf/mini-golf-course-hole-3-blue-hole-4-black-tees-thumb.webp",
+    "room": "outdoor-mini-golf",
+    "name": "mini-golf-course-hole-3-blue-hole-4-black-tees",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Hole 4 \u00b7 One last putt. Bragging rights await.",
+    "alt_text": "Backyard mini-golf overview with blue hole-three markers in front and black number-four tee markers beside the patio.",
+    "hole": 4,
+    "tee_color": "black",
+    "tags": [
+      "the-fore"
+    ]
+  },
+  {
+    "src": "/assets/photos/outdoor-mini-golf/hole-4-black-numbered-tee-detail.webp",
+    "thumb": "/assets/photos/outdoor-mini-golf/hole-4-black-numbered-tee-detail-thumb.webp",
+    "room": "outdoor-mini-golf",
+    "name": "hole-4-black-numbered-tee-detail",
+    "width": 1600,
+    "height": 978,
+    "caption": "Hole 4 \u00b7 Black tees, final-round focus.",
+    "alt_text": "Close view of the black number-four tee markers beside the covered patio and mini-golf turf.",
+    "hole": 4,
+    "tee_color": "black",
+    "tags": [
+      "the-fore"
+    ]
+  },
+  {
+    "src": "/assets/photos/exterior/aerial-backyard-pool-putting-greens-court.webp",
+    "thumb": "/assets/photos/exterior/aerial-backyard-pool-putting-greens-court-thumb.webp",
+    "room": "exterior",
+    "name": "aerial-backyard-pool-putting-greens-court",
+    "width": 2400,
+    "height": 1350,
+    "caption": "The backyard clubhouse, from above",
+    "alt_text": "Straight-down aerial view of the kidney-shaped pool, putting greens with white sand-style insets, red and green sport court, blue fire-pit chairs and hot tub."
+  },
+  {
+    "src": "/assets/photos/fire-pit/twilight-fire-pit-adirondack-pool-patio.webp",
+    "thumb": "/assets/photos/fire-pit/twilight-fire-pit-adirondack-pool-patio-thumb.webp",
+    "room": "fire-pit",
+    "name": "twilight-fire-pit-adirondack-pool-patio",
+    "width": 2400,
+    "height": 1600,
+    "caption": "Fire-pit evenings beside the pool",
+    "alt_text": "Lit round fire pit surrounded by blue Adirondack chairs with pink-patterned pillows, with the pool, Bogey putting flag, string-lit patio and hot tub beyond."
+  }
+]

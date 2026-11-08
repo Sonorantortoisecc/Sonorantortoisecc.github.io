@@ -1,0 +1,1 @@
+Original monogram.png, seal.png and bogey.png supplied by Eric belong here. Do not redraw, generate or substitute. The footer has inert template image slots. After originals are delivered and placements approved, move images out of that template. Lifetime Member artwork implies no external country-club entitlements.

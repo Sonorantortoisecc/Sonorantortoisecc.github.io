@@ -1,0 +1,18 @@
+/* SCC shared tokens v1.1 — 2026-11-07. Offline fonts; OFL licenses in fonts/. */
+@font-face{font-family:'Cinzel';font-style:normal;font-weight:500;font-display:swap;src:url('./fonts/cinzel-500.woff2') format('woff2')}
+@font-face{font-family:'Cinzel';font-style:normal;font-weight:600;font-display:swap;src:url('./fonts/cinzel-600.woff2') format('woff2')}
+@font-face{font-family:'Cinzel';font-style:normal;font-weight:700;font-display:swap;src:url('./fonts/cinzel-700.woff2') format('woff2')}
+@font-face{font-family:'Cinzel Decorative';font-style:normal;font-weight:700;font-display:swap;src:url('./fonts/cinzel-decorative-700.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:url('./fonts/dm-sans-400.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:500;font-display:swap;src:url('./fonts/dm-sans-500.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:600;font-display:swap;src:url('./fonts/dm-sans-600.woff2') format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:700;font-display:swap;src:url('./fonts/dm-sans-700.woff2') format('woff2')}
+
+:root{
+ --navy:#1b2a44;--navy-deep:#0f1a2d;--olive:#56613c;--rose:#d9a596;--cream:#f5efe4;--paper:#fffdf8;--ink:#1c2230;--muted:#55596a;--line:#d8ccb7;--sage:#9aa883;--terra:#a4502f;--danger:#7e2a17;
+ --display:'Cinzel Decorative',Georgia,'Times New Roman',serif;--serif:'Cinzel',Georgia,'Times New Roman',serif;--caps:'Cinzel',Georgia,'Times New Roman',serif;--sans:'DM Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+ --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-7:48px;--space-8:64px;--space-9:96px;
+ --watermark-screen-opacity:.09;--watermark-print-opacity:0;
+ --radius-control:4px;--radius-card:12px;--shadow-card:0 6px 18px -10px rgba(15,26,45,.25);
+ --size-display:clamp(40px,6.5vw,88px);--size-h1:clamp(36px,5.3vw,72px);--size-h2:clamp(30px,4vw,52px);--size-h3:clamp(23px,2vw,28px);
+}
