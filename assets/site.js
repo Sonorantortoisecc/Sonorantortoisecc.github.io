@@ -23,3 +23,6 @@ dialog?.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault(
 // Deliberately no network handlers, form submission, analytics, cookies, localStorage,
 // payment integration or notification collection. Email field and notify button are disabled.
 document.getElementById('notify-form')?.addEventListener('submit',e=>e.preventDefault());
+
+// The Fore: keep the initial grid to 12 owner photos; reveal the rest on request.
+const foreExpand=document.getElementById('fore-expand');foreExpand?.addEventListener('click',()=>{const open=foreExpand.getAttribute('aria-expanded')!=='true';document.querySelectorAll('[data-fore-extra]').forEach(f=>f.hidden=!open);foreExpand.setAttribute('aria-expanded',String(open));foreExpand.textContent=open?'Show first 12 photos ↑':'Show all 42 photos ↗';});
