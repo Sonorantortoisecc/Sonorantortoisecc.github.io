@@ -118,8 +118,8 @@
         close: { color: '#1b2a44' }
       },
       events: {
-        afterInit: function () { syncBadgeFromCart(); wireCheckoutButton(); },
-        addLineItem: function () { syncBadgeFromCart(); wireCheckoutButton(); },
+        afterInit: function () { syncBadgeFromCart(); wireCheckoutButton(); formatLineItemPrices(); },
+        addLineItem: function () { syncBadgeFromCart(); wireCheckoutButton(); formatLineItemPrices(); },
         updateLineItem: function () { syncBadgeFromCart(); },
         removeLineItem: function () { syncBadgeFromCart(); }
       }
@@ -130,7 +130,7 @@
         variantTitle: true,
         quantity: true,
         price: true,
-        priceWithDiscounts: true
+        priceWithDiscounts: false
       }
     },
     toggle: {
@@ -238,6 +238,59 @@
     });
   }
 
+
+  function formatLineItemPrices() {
+    try {
+      var iframe = document.querySelector('.shopify-buy-frame--cart iframe');
+      if (!iframe || !iframe.contentDocument) return;
+      var doc = iframe.contentDocument;
+      if (!doc.getElementById('scc-line-price-style')) {
+        var style = doc.createElement('style');
+        style.id = 'scc-line-price-style';
+        style.textContent =
+          '.shopify-buy__cart-item__price{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:flex-end;gap:8px;}' +
+          '.scc-unit-price{font-weight:400;opacity:.85;}' +
+          '.scc-line-total{font-weight:600;}';
+        (doc.head || doc.documentElement).appendChild(style);
+      }
+      doc.querySelectorAll('li.shopify-buy__cart-item').forEach(function (row) {
+        var qtyInput = row.querySelector('input.shopify-buy__quantity, input[type="number"]');
+        var qty = qtyInput ? parseInt(qtyInput.value, 10) || 1 : 1;
+        var priceEl = row.querySelector('[data-element="lineItem.price"]');
+        if (!priceEl) return;
+        var lineTotal = NaN;
+        var totalNode = priceEl.querySelector('.scc-line-total');
+        if (totalNode) {
+          var tm = (totalNode.textContent || '').replace(/,/g, '').match(/(\d+(?:\.\d{1,2})?)/);
+          if (tm) lineTotal = parseFloat(tm[1]);
+        } else {
+          var text = (priceEl.textContent || '').trim();
+          var m = text.replace(/,/g, '').match(/\$\s*(\d+(?:\.\d{1,2})?)/);
+          if (m) lineTotal = parseFloat(m[1]);
+        }
+        if (!isFinite(lineTotal)) {
+          var raw = parseFloat(priceEl.getAttribute('data-scc-line-total-raw') || '');
+          if (isFinite(raw)) lineTotal = raw;
+        }
+        if (!isFinite(lineTotal)) return;
+        priceEl.setAttribute('data-scc-line-total-raw', String(lineTotal));
+        if (qty <= 1) {
+          priceEl.textContent = '$' + lineTotal.toFixed(2);
+          priceEl.removeAttribute('data-scc-formatted-qty');
+          return;
+        }
+        var unit = lineTotal / qty;
+        if (!isFinite(unit) || unit <= 0) return;
+        var sig = qty + ':' + lineTotal.toFixed(2);
+        if (priceEl.getAttribute('data-scc-formatted-qty') === sig && priceEl.querySelector('.scc-unit-price')) return;
+        priceEl.setAttribute('data-scc-formatted-qty', sig);
+        priceEl.innerHTML =
+          '<span class="scc-unit-price">$' + unit.toFixed(2) + ' each</span>' +
+          '<span class="scc-line-total">$' + lineTotal.toFixed(2) + '</span>';
+      });
+    } catch (e) {}
+  }
+
   function wireCheckoutButton() {
     try {
       var iframe = document.querySelector('.shopify-buy-frame--cart iframe');
@@ -260,7 +313,7 @@
   function openCart() {
     var wrap = document.querySelector('.shopify-buy-frame--cart');
     if (wrap && wrap.classList.contains('is-visible') && wrap.classList.contains('is-active')) {
-      wireCheckoutButton();
+      wireCheckoutButton(); formatLineItemPrices();
       return;
     }
     var toggleBtn = document.querySelector('.shopify-buy-frame--toggle button, .shopify-buy__cart-toggle');
@@ -363,11 +416,11 @@
 
     setTimeout(function () {
       syncBadgeFromCart();
-      wireCheckoutButton();
+      wireCheckoutButton(); formatLineItemPrices();
     }, 900);
     setInterval(function () {
       syncBadgeFromCart();
-      wireCheckoutButton();
+      wireCheckoutButton(); formatLineItemPrices();
     }, 2000);
   }
 
