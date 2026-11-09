@@ -23,3 +23,30 @@ dialog?.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault(
 // Deliberately no network handlers, form submission, analytics, cookies, localStorage,
 // payment integration or notification collection. Email field and notify button are disabled.
 document.getElementById('notify-form')?.addEventListener('submit',e=>e.preventDefault());
+
+/* SCC Pro Shop cart loader */
+(function(){
+  if (window.__sccCartLoader) return;
+  window.__sccCartLoader = true;
+  function injectCartCss(){
+    if (document.querySelector('link[data-scc-cart-css]')) return;
+    /* style.css already has rules on most pages; guide uses guide-site-shell — add minimal inline if needed */
+    if (!document.querySelector('link[href*="style.css"]')) {
+      var s=document.createElement('style');
+      s.setAttribute('data-scc-cart-css','1');
+      s.textContent='.scc-cart-button{position:relative;display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;margin-left:8px;border:1px solid #d8ccb7;background:#fffdf8;color:#1b2a44;cursor:pointer;flex-shrink:0}.scc-cart-button:hover{background:#d9a596}.scc-cart-count{position:absolute;top:-6px;right:-6px;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:#1b2a44;color:#fffdf8;font-size:10px;font-weight:700;line-height:18px;text-align:center}';
+      document.head.appendChild(s);
+    }
+  }
+  function loadCart(){
+    injectCartCss();
+    if (document.querySelector('script[data-scc-proshop-cart]')) return;
+    var s=document.createElement('script');
+    s.src='/assets/shop/buybuttons.js';
+    s.defer=true;
+    s.setAttribute('data-scc-proshop-cart','1');
+    document.head.appendChild(s);
+  }
+  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded', loadCart);
+  else loadCart();
+})();

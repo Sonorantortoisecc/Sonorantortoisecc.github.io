@@ -1,8 +1,9 @@
-/* SCC Pro Shop — Shopify Buy Button (single SDK load) */
+/* SCC Pro Shop — Shopify Buy Button with on-site cart drawer */
 (function () {
   var DOMAIN = 'stqe3x-12.myshopify.com';
   var TOKEN = 'c7e643f9d9779158dcd702a936d789ef';
   var SCRIPT_URL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  var STORAGE_KEY = 'scc-proshop-cart-count';
 
   var PRODUCTS = [
     { id: '15493216600314', nodeId: 'product-component-rope-cap' },
@@ -14,9 +15,22 @@
     { id: '15496734310650', nodeId: 'product-component-womens-polo' }
   ];
 
+  var brandBtn = {
+    'font-family': 'DM Sans, system-ui, sans-serif',
+    'font-size': '12px',
+    'font-weight': '600',
+    'letter-spacing': '0.02em',
+    'background-color': '#1b2a44',
+    color: '#fffdf8',
+    'border-radius': '0',
+    padding: '14px 22px',
+    ':hover': { 'background-color': '#d9a596', color: '#1b2a44' },
+    ':focus': { 'background-color': '#d9a596', color: '#1b2a44' }
+  };
+
   var productOptions = {
     product: {
-      buttonDestination: 'checkout',
+      buttonDestination: 'cart',
       contents: {
         img: false,
         imgWithCarousel: false,
@@ -26,15 +40,10 @@
         price: true,
         options: true,
         quantity: false,
-        quantityIncrement: false,
-        quantityDecrement: false,
-        quantityInput: false,
         button: true,
         buttonWithQuantity: false
       },
-      text: {
-        button: 'Buy now'
-      },
+      text: { button: 'Add to cart' },
       styles: {
         product: {
           'text-align': 'left',
@@ -45,44 +54,17 @@
             'margin-bottom': '0'
           }
         },
-        prices: {
-          'margin-bottom': '12px'
-        },
+        prices: { 'margin-bottom': '12px' },
         price: {
           'font-family': 'Cinzel, Georgia, serif',
           'font-size': '22px',
           'font-weight': '600',
           color: '#1b2a44'
         },
-        compareAt: {
-          'font-family': 'DM Sans, system-ui, sans-serif',
-          'font-size': '14px'
-        },
-        unitPrice: {
-          'font-family': 'DM Sans, system-ui, sans-serif',
-          'font-size': '12px'
-        },
-        options: {
-          'margin-bottom': '14px'
-        },
-        button: {
-          'font-family': 'DM Sans, system-ui, sans-serif',
-          'font-size': '12px',
-          'font-weight': '600',
-          'letter-spacing': '0.02em',
-          'background-color': '#1b2a44',
-          color: '#fffdf8',
-          'border-radius': '0',
-          padding: '14px 22px',
-          ':hover': {
-            'background-color': '#d9a596',
-            color: '#1b2a44'
-          },
-          ':focus': {
-            'background-color': '#d9a596',
-            color: '#1b2a44'
-          }
-        }
+        compareAt: { 'font-family': 'DM Sans, system-ui, sans-serif', 'font-size': '14px' },
+        unitPrice: { 'font-family': 'DM Sans, system-ui, sans-serif', 'font-size': '12px' },
+        options: { 'margin-bottom': '14px' },
+        button: brandBtn
       }
     },
     option: {
@@ -101,36 +83,269 @@
           'border-color': '#d8ccb7',
           'border-radius': '0'
         },
-        wrapper: {
-          'margin-bottom': '10px'
-        }
+        wrapper: { 'margin-bottom': '10px' }
       }
     },
     cart: {
-      text: {
-        total: 'Subtotal',
-        button: 'Checkout'
-      }
-    },
-    toggle: { styles: { toggle: { display: 'none' } } },
-    modalProduct: {
+      startOpen: false,
+      popup: true,
       contents: {
-        img: false,
-        imgWithCarousel: true,
-        button: false,
-        buttonWithQuantity: true
+        title: true,
+        lineItems: true,
+        footer: true,
+        note: false,
+        discounts: true
+      },
+      text: {
+        title: 'Your cart',
+        empty: 'Your cart is empty.',
+        button: 'Checkout',
+        total: 'Subtotal',
+        notice: 'Shipping and taxes calculated at Shopify checkout.',
+        close: 'Close cart'
       },
       styles: {
-        button: {
-          'background-color': '#1b2a44',
-          ':hover': { 'background-color': '#d9a596' }
-        }
+        button: brandBtn,
+        footer: { 'background-color': '#fffdf8', 'border-color': '#d8ccb7' },
+        header: { 'background-color': '#fffdf8', 'border-color': '#d8ccb7' },
+        cart: { 'background-color': '#fffdf8' },
+        lineItems: { 'font-family': 'DM Sans, system-ui, sans-serif' },
+        subtotalText: { 'font-family': 'DM Sans, system-ui, sans-serif', color: '#1b2a44' },
+        subtotalPrice: { 'font-family': 'Cinzel, Georgia, serif', color: '#1b2a44' },
+        title: { 'font-family': 'Cinzel, Georgia, serif', color: '#1b2a44' },
+        empty: { 'font-family': 'DM Sans, system-ui, sans-serif', color: '#55596a' },
+        notice: { 'font-family': 'DM Sans, system-ui, sans-serif', 'font-size': '12px', color: '#55596a' },
+        close: { color: '#1b2a44' }
       },
-      text: { button: 'Buy now' }
+      events: {
+        afterInit: function () { syncBadgeFromCart(); wireCheckoutButton(); },
+        addLineItem: function () { syncBadgeFromCart(); wireCheckoutButton(); },
+        updateLineItem: function () { syncBadgeFromCart(); },
+        removeLineItem: function () { syncBadgeFromCart(); }
+      }
+    },
+    lineItem: {
+      contents: {
+        image: true,
+        variantTitle: true,
+        quantity: true,
+        price: true,
+        priceWithDiscounts: true
+      }
+    },
+    toggle: {
+      styles: {
+        toggle: { display: 'none' }
+      }
     }
   };
 
+  function writeCount(n) {
+    n = Math.max(0, parseInt(n, 10) || 0);
+    try { localStorage.setItem(STORAGE_KEY, String(n)); } catch (e) {}
+    document.querySelectorAll('[data-scc-cart-count]').forEach(function (el) {
+      el.textContent = n > 0 ? String(n) : '';
+      el.hidden = n < 1;
+    });
+    document.querySelectorAll('[data-scc-cart-button]').forEach(function (btn) {
+      btn.setAttribute('data-count', String(n));
+      btn.setAttribute('aria-label', n > 0 ? 'Open cart, ' + n + ' items' : 'Open cart');
+    });
+  }
+
+  function cartIdFromStorage() {
+    try {
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (k && /\.checkoutId$/.test(k)) return localStorage.getItem(k);
+      }
+    } catch (e) {}
+    return null;
+  }
+
+  var badgeFetchBusy = false;
+  function syncBadgeFromCart() {
+    try {
+      var iframe = document.querySelector('.shopify-buy-frame--cart iframe');
+      if (iframe && iframe.contentDocument) {
+        var qtyInputs = iframe.contentDocument.querySelectorAll(
+          'input[aria-label*="quantity" i], input.shopify-buy__quantity, input[type="number"]'
+        );
+        if (qtyInputs.length) {
+          var sum = 0;
+          qtyInputs.forEach(function (inp) { sum += parseInt(inp.value, 10) || 0; });
+          writeCount(sum);
+          return;
+        }
+      }
+    } catch (e) {}
+
+    var cartId = cartIdFromStorage();
+    if (!cartId) {
+      var stored = 0;
+      try { stored = parseInt(localStorage.getItem(STORAGE_KEY) || '0', 10) || 0; } catch (e2) {}
+      writeCount(stored);
+      return;
+    }
+    if (badgeFetchBusy) return;
+    badgeFetchBusy = true;
+    fetch('https://' + DOMAIN + '/api/2024-10/graphql.json', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Shopify-Storefront-Access-Token': TOKEN
+      },
+      body: JSON.stringify({
+        query: 'query($id:ID!){ cart(id:$id){ totalQuantity } }',
+        variables: { id: cartId }
+      })
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var q = data && data.data && data.data.cart && data.data.cart.totalQuantity;
+        if (typeof q === 'number') writeCount(q);
+      })
+      .catch(function () {})
+      .finally(function () { badgeFetchBusy = false; });
+  }
+
+  function fetchCheckoutUrl() {
+    var cartId = cartIdFromStorage();
+    if (!cartId) return Promise.resolve(null);
+    return fetch('https://' + DOMAIN + '/api/2024-10/graphql.json', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Shopify-Storefront-Access-Token': TOKEN
+      },
+      body: JSON.stringify({
+        query: 'query($id:ID!){ cart(id:$id){ checkoutUrl totalQuantity } }',
+        variables: { id: cartId }
+      })
+    })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        var cart = data && data.data && data.data.cart;
+        if (cart && typeof cart.totalQuantity === 'number') writeCount(cart.totalQuantity);
+        return cart && cart.checkoutUrl;
+      })
+      .catch(function () { return null; });
+  }
+
+  function goToCheckout() {
+    fetchCheckoutUrl().then(function (url) {
+      if (url) window.location.assign(url);
+    });
+  }
+
+  function wireCheckoutButton() {
+    try {
+      var iframe = document.querySelector('.shopify-buy-frame--cart iframe');
+      if (!iframe || !iframe.contentDocument) return;
+      var btn = iframe.contentDocument.querySelector('[data-element="cart.button"]');
+      if (!btn || btn.getAttribute('data-scc-checkout') === '1') return;
+      btn.setAttribute('data-scc-checkout', '1');
+      btn.addEventListener(
+        'click',
+        function (e) {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+          goToCheckout();
+        },
+        true
+      );
+    } catch (e) {}
+  }
+
+  function openCart() {
+    var wrap = document.querySelector('.shopify-buy-frame--cart');
+    if (wrap && wrap.classList.contains('is-visible') && wrap.classList.contains('is-active')) {
+      wireCheckoutButton();
+      return;
+    }
+    var toggleBtn = document.querySelector('.shopify-buy-frame--toggle button, .shopify-buy__cart-toggle');
+    if (toggleBtn) {
+      toggleBtn.click();
+      setTimeout(wireCheckoutButton, 300);
+      return;
+    }
+    var frame = document.querySelector('.shopify-buy-frame--toggle iframe');
+    if (frame) {
+      try {
+        var inner = frame.contentDocument && frame.contentDocument.querySelector('button');
+        if (inner) {
+          inner.click();
+          setTimeout(wireCheckoutButton, 300);
+          return;
+        }
+      } catch (e) {}
+    }
+    if (wrap) {
+      wrap.classList.add('is-active', 'is-visible');
+      wrap.removeAttribute('hidden');
+    }
+    setTimeout(wireCheckoutButton, 300);
+  }
+
+  window.SCCProShop = window.SCCProShop || {};
+  window.SCCProShop.openCart = openCart;
+  window.SCCProShop.syncBadge = syncBadgeFromCart;
+  window.SCCProShop.checkout = goToCheckout;
+
+  function ensureMounts() {
+    if (!document.getElementById('scc-cart-mount')) {
+      var cartMount = document.createElement('div');
+      cartMount.id = 'scc-cart-mount';
+      document.body.appendChild(cartMount);
+    } else {
+      document.getElementById('scc-cart-mount').removeAttribute('hidden');
+    }
+    if (!document.getElementById('scc-cart-toggle-mount')) {
+      var toggleMount = document.createElement('div');
+      toggleMount.id = 'scc-cart-toggle-mount';
+      toggleMount.className = 'scc-cart-toggle-host';
+      document.body.appendChild(toggleMount);
+    }
+  }
+
+  function ensureHeaderButton() {
+    var header = document.querySelector('.site-header');
+    if (!header || header.querySelector('[data-scc-cart-button]')) return;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'scc-cart-button';
+    btn.setAttribute('data-scc-cart-button', '');
+    btn.setAttribute('aria-label', 'Open cart');
+    btn.innerHTML =
+      '<svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7">' +
+      '<path d="M6 7h15l-1.5 9h-12z"/><path d="M6 7 5 3H2"/><circle cx="9" cy="20" r="1.3"/>' +
+      '<circle cx="17" cy="20" r="1.3"/></svg>' +
+      '<span class="scc-cart-count" data-scc-cart-count hidden></span>';
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      openCart();
+    });
+    var menu = header.querySelector('.menu-toggle');
+    if (menu) header.insertBefore(btn, menu);
+    else header.appendChild(btn);
+    syncBadgeFromCart();
+  }
+
   function mount(ui) {
+    ensureMounts();
+    ensureHeaderButton();
+
+    ui.createComponent('cart', {
+      node: document.getElementById('scc-cart-mount'),
+      moneyFormat: '${{amount}}',
+      options: productOptions
+    });
+
+    ui.createComponent('toggle', {
+      node: document.getElementById('scc-cart-toggle-mount'),
+      options: productOptions
+    });
+
     PRODUCTS.forEach(function (p) {
       var node = document.getElementById(p.nodeId);
       if (!node) return;
@@ -141,6 +356,19 @@
         options: productOptions
       });
     });
+
+    if (/[?&]cart=1\b/.test(location.search) || location.hash === '#cart') {
+      setTimeout(openCart, 700);
+    }
+
+    setTimeout(function () {
+      syncBadgeFromCart();
+      wireCheckoutButton();
+    }, 900);
+    setInterval(function () {
+      syncBadgeFromCart();
+      wireCheckoutButton();
+    }, 2000);
   }
 
   function start() {
@@ -152,12 +380,26 @@
   }
 
   function loadScript() {
+    if (document.querySelector('script[data-scc-buybutton-sdk]')) {
+      var waited = 0;
+      var t = setInterval(function () {
+        waited += 50;
+        if (window.ShopifyBuy && window.ShopifyBuy.UI) {
+          clearInterval(t);
+          start();
+        } else if (waited > 8000) clearInterval(t);
+      }, 50);
+      return;
+    }
     var script = document.createElement('script');
     script.async = true;
     script.src = SCRIPT_URL;
+    script.setAttribute('data-scc-buybutton-sdk', '1');
     script.onload = start;
     (document.getElementsByTagName('head')[0] || document.body).appendChild(script);
   }
+
+  ensureHeaderButton();
 
   if (window.ShopifyBuy) {
     if (window.ShopifyBuy.UI) start();
