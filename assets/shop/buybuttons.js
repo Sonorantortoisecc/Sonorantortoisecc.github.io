@@ -1,5 +1,8 @@
 /* SCC Pro Shop — Shopify Buy Button with on-site cart drawer */
 (function () {
+  if (window.__sccProShopInit) return;
+  window.__sccProShopInit = true;
+
   var DOMAIN = 'stqe3x-12.myshopify.com';
   var TOKEN = 'c7e643f9d9779158dcd702a936d789ef';
   var SCRIPT_URL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
@@ -346,6 +349,13 @@
   window.SCCProShop.syncBadge = syncBadgeFromCart;
   window.SCCProShop.checkout = goToCheckout;
 
+  var mounted = {
+    cart: false,
+    toggle: false,
+    products: Object.create(null),
+    timers: false
+  };
+
   function ensureMounts() {
     if (!document.getElementById('scc-cart-mount')) {
       var cartMount = document.createElement('div');
@@ -385,55 +395,107 @@
     syncBadgeFromCart();
   }
 
+  function isAlreadyMounted(node) {
+    if (!node) return true;
+    if (node.getAttribute('data-scc-mounted') === '1') return true;
+    if (node.querySelector('.shopify-buy-frame, iframe, .shopify-buy__product')) return true;
+    return false;
+  }
+
+  function markMounted(node) {
+    if (node) node.setAttribute('data-scc-mounted', '1');
+  }
+
   function mount(ui) {
     ensureMounts();
     ensureHeaderButton();
 
-    ui.createComponent('cart', {
-      node: document.getElementById('scc-cart-mount'),
-      moneyFormat: '${{amount}}',
-      options: productOptions
-    });
+    var cartNode = document.getElementById('scc-cart-mount');
+    if (!mounted.cart && cartNode && !isAlreadyMounted(cartNode)) {
+      ui.createComponent('cart', {
+        node: cartNode,
+        moneyFormat: '${{amount}}',
+        options: productOptions
+      });
+      markMounted(cartNode);
+      mounted.cart = true;
+    } else {
+      mounted.cart = true;
+    }
 
-    ui.createComponent('toggle', {
-      node: document.getElementById('scc-cart-toggle-mount'),
-      options: productOptions
-    });
+    var toggleNode = document.getElementById('scc-cart-toggle-mount');
+    if (!mounted.toggle && toggleNode && !isAlreadyMounted(toggleNode)) {
+      ui.createComponent('toggle', {
+        node: toggleNode,
+        options: productOptions
+      });
+      markMounted(toggleNode);
+      mounted.toggle = true;
+    } else {
+      mounted.toggle = true;
+    }
 
     PRODUCTS.forEach(function (p) {
+      if (mounted.products[p.nodeId]) return;
       var node = document.getElementById(p.nodeId);
       if (!node) return;
+      if (isAlreadyMounted(node)) {
+        mounted.products[p.nodeId] = true;
+        return;
+      }
       ui.createComponent('product', {
         id: p.id,
         node: node,
         moneyFormat: '${{amount}}',
         options: productOptions
       });
+      markMounted(node);
+      mounted.products[p.nodeId] = true;
     });
 
     if (/[?&]cart=1\b/.test(location.search) || location.hash === '#cart') {
       setTimeout(openCart, 700);
     }
 
-    setTimeout(function () {
-      syncBadgeFromCart();
-      wireCheckoutButton(); formatLineItemPrices();
-    }, 900);
-    setInterval(function () {
-      syncBadgeFromCart();
-      wireCheckoutButton(); formatLineItemPrices();
-    }, 2000);
+    if (!mounted.timers) {
+      mounted.timers = true;
+      setTimeout(function () {
+        syncBadgeFromCart();
+        wireCheckoutButton();
+        formatLineItemPrices();
+      }, 900);
+      setInterval(function () {
+        syncBadgeFromCart();
+        wireCheckoutButton();
+        formatLineItemPrices();
+      }, 2000);
+    }
+
+    window.__sccProShopMounted = true;
   }
 
+  var startQueued = false;
   function start() {
+    if (window.__sccProShopMounted) {
+      ensureHeaderButton();
+      syncBadgeFromCart();
+      return;
+    }
+    if (startQueued) return;
+    startQueued = true;
     var client = ShopifyBuy.buildClient({
       domain: DOMAIN,
       storefrontAccessToken: TOKEN
     });
-    ShopifyBuy.UI.onReady(client).then(mount);
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      mount(ui);
+    }).catch(function () {
+      startQueued = false;
+    });
   }
 
   function loadScript() {
+    if (window.__sccProShopMounted) return;
     if (document.querySelector('script[data-scc-buybutton-sdk]')) {
       var waited = 0;
       var t = setInterval(function () {
@@ -453,12 +515,27 @@
     (document.getElementsByTagName('head')[0] || document.body).appendChild(script);
   }
 
-  ensureHeaderButton();
-
-  if (window.ShopifyBuy) {
-    if (window.ShopifyBuy.UI) start();
-    else loadScript();
-  } else {
-    loadScript();
+  function boot() {
+    if (window.__sccProShopMounted) {
+      ensureHeaderButton();
+      syncBadgeFromCart();
+      return;
+    }
+    ensureHeaderButton();
+    if (window.ShopifyBuy) {
+      if (window.ShopifyBuy.UI) start();
+      else loadScript();
+    } else {
+      loadScript();
+    }
   }
+
+  boot();
+
+  /* bfcache restore: never remount; only refresh badge/header */
+  window.addEventListener('pageshow', function (e) {
+    if (!e.persisted) return;
+    ensureHeaderButton();
+    syncBadgeFromCart();
+  });
 })();

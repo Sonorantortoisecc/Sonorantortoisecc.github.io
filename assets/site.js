@@ -40,7 +40,8 @@ document.getElementById('notify-form')?.addEventListener('submit',e=>e.preventDe
   }
   function loadCart(){
     injectCartCss();
-    if (document.querySelector('script[data-scc-proshop-cart]')) return;
+    if (document.querySelector('script[data-scc-proshop-cart], script[src*="/assets/shop/buybuttons.js"]')) return;
+    if (window.__sccProShopInit || window.__sccProShopMounted) return;
     var s=document.createElement('script');
     s.src='/assets/shop/buybuttons.js';
     s.defer=true;
