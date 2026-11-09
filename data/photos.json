@@ -615,5 +615,75 @@
     "height": 1200,
     "caption": "The olive living-room futon",
     "alt_text": "Olive-gray futon with olive and navy chevron pillows against a blue wall in the living room."
+  },
+  {
+    "src": "/assets/photos/bedrooms/primary-retreat-wood-slat-wall-golf-clubs-leather-bench.webp",
+    "thumb": "/assets/photos/bedrooms/primary-retreat-wood-slat-wall-golf-clubs-leather-bench-thumb.webp",
+    "room": "primary-retreat",
+    "name": "primary-retreat-wood-slat-wall-golf-clubs-leather-bench",
+    "width": 2000,
+    "height": 1333,
+    "caption": "The primary retreat \u00b7 crossed clubs and a leather bench",
+    "alt_text": "Bed with green bedding and an orange throw in front of a wood-slat wall with crossed golf clubs, a leather bench and a navy rug."
+  },
+  {
+    "src": "/assets/photos/bedrooms/primary-retreat-sonoran-sign-black-dresser.webp",
+    "thumb": "/assets/photos/bedrooms/primary-retreat-sonoran-sign-black-dresser-thumb.webp",
+    "room": "primary-retreat",
+    "name": "primary-retreat-sonoran-sign-black-dresser",
+    "width": 2000,
+    "height": 1333,
+    "caption": "The primary retreat \u00b7 Sonoran sign and dresser",
+    "alt_text": "View from the bed toward a black dresser beneath a green Sonoran sign, with desert art and a ceiling fan."
+  },
+  {
+    "src": "/assets/photos/bedrooms/primary-retreat-window-dresser-ceiling-fan.webp",
+    "thumb": "/assets/photos/bedrooms/primary-retreat-window-dresser-ceiling-fan-thumb.webp",
+    "room": "primary-retreat",
+    "name": "primary-retreat-window-dresser-ceiling-fan",
+    "width": 2000,
+    "height": 1333,
+    "caption": "The primary retreat \u00b7 room to unwind",
+    "alt_text": "Bed with blue and green pillows facing a curtained window, black dresser and ceiling fan."
+  },
+  {
+    "src": "/assets/photos/kitchen/kitchen-galley-wood-cabinets-stainless-fridge.webp",
+    "thumb": "/assets/photos/kitchen/kitchen-galley-wood-cabinets-stainless-fridge-thumb.webp",
+    "room": "kitchen",
+    "name": "kitchen-galley-wood-cabinets-stainless-fridge",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Room for the whole crew to cook",
+    "alt_text": "Kitchen with wood cabinets, white counters, blue tile, a gas range and a stainless refrigerator, looking toward the dining area."
+  },
+  {
+    "src": "/assets/photos/kitchen/kitchen-gas-range-blue-herringbone-tile.webp",
+    "thumb": "/assets/photos/kitchen/kitchen-gas-range-blue-herringbone-tile-thumb.webp",
+    "room": "kitchen",
+    "name": "kitchen-gas-range-blue-herringbone-tile",
+    "width": 2000,
+    "height": 1333,
+    "caption": "A gas range ready for the clubhouse cook",
+    "alt_text": "Gas range and microwave set between wood cabinets with a blue herringbone tile backsplash."
+  },
+  {
+    "src": "/assets/photos/kitchen/kitchen-sink-dishwasher-counter-run.webp",
+    "thumb": "/assets/photos/kitchen/kitchen-sink-dishwasher-counter-run-thumb.webp",
+    "room": "kitchen",
+    "name": "kitchen-sink-dishwasher-counter-run",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Plenty of counter for game-day spreads",
+    "alt_text": "Kitchen counter with a sink, dishwasher and gas range under wood cabinets, with the hallway beyond."
+  },
+  {
+    "src": "/assets/photos/kitchen/kitchen-breakfast-table-pool-view.webp",
+    "thumb": "/assets/photos/kitchen/kitchen-breakfast-table-pool-view-thumb.webp",
+    "room": "kitchen",
+    "name": "kitchen-breakfast-table-pool-view",
+    "width": 2000,
+    "height": 1333,
+    "caption": "Breakfast with a view of the pool",
+    "alt_text": "Round breakfast table set for six by the kitchen, with a window onto the pool and patio."
   }
 ]
