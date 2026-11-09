@@ -2,7 +2,7 @@
   {
     "src": "/assets/photos/bedrooms/cane-headboard-bedroom-blue-bedding-window.webp",
     "thumb": "/assets/photos/bedrooms/cane-headboard-bedroom-blue-bedding-window-thumb.webp",
-    "room": "bedrooms",
+    "room": "desert-blues",
     "name": "cane-headboard-bedroom-blue-bedding-window",
     "width": 2000,
     "height": 1333,
@@ -12,7 +12,7 @@
   {
     "src": "/assets/photos/bedrooms/cane-headboard-bedroom-mirrored-closet.webp",
     "thumb": "/assets/photos/bedrooms/cane-headboard-bedroom-mirrored-closet-thumb.webp",
-    "room": "bedrooms",
+    "room": "desert-blues",
     "name": "cane-headboard-bedroom-mirrored-closet",
     "width": 2000,
     "height": 1333,
@@ -22,7 +22,7 @@
   {
     "src": "/assets/photos/bedrooms/cane-headboard-bedside-lamp-desert-wallpaper.webp",
     "thumb": "/assets/photos/bedrooms/cane-headboard-bedside-lamp-desert-wallpaper-thumb.webp",
-    "room": "bedrooms",
+    "room": "desert-blues",
     "name": "cane-headboard-bedside-lamp-desert-wallpaper",
     "width": 2000,
     "height": 1333,
@@ -192,7 +192,7 @@
   {
     "src": "/assets/photos/bedrooms/golf-bedroom-wood-slat-wall-navy-rug.webp",
     "thumb": "/assets/photos/bedrooms/golf-bedroom-wood-slat-wall-navy-rug-thumb.webp",
-    "room": "bedrooms",
+    "room": "primary-retreat",
     "name": "golf-bedroom-wood-slat-wall-navy-rug",
     "width": 2000,
     "height": 1333,
@@ -202,7 +202,7 @@
   {
     "src": "/assets/photos/bedrooms/green-bedding-fore-pillow-leather-bench.webp",
     "thumb": "/assets/photos/bedrooms/green-bedding-fore-pillow-leather-bench-thumb.webp",
-    "room": "bedrooms",
+    "room": "primary-retreat",
     "name": "green-bedding-fore-pillow-leather-bench",
     "width": 2000,
     "height": 1333,
@@ -469,7 +469,7 @@
   {
     "src": "/assets/photos/bedrooms/rose-bedroom-black-headboard-cream-curtains.webp",
     "thumb": "/assets/photos/bedrooms/rose-bedroom-black-headboard-cream-curtains-thumb.webp",
-    "room": "bedrooms",
+    "room": "rose-room",
     "name": "rose-bedroom-black-headboard-cream-curtains",
     "width": 2000,
     "height": 1333,
@@ -479,7 +479,7 @@
   {
     "src": "/assets/photos/bedrooms/rose-bedroom-golf-art-mirrored-closet.webp",
     "thumb": "/assets/photos/bedrooms/rose-bedroom-golf-art-mirrored-closet-thumb.webp",
-    "room": "bedrooms",
+    "room": "rose-room",
     "name": "rose-bedroom-golf-art-mirrored-closet",
     "width": 2000,
     "height": 1333,
@@ -489,7 +489,7 @@
   {
     "src": "/assets/photos/bedrooms/rose-bedroom-bedside-lamp-knit-poufs.webp",
     "thumb": "/assets/photos/bedrooms/rose-bedroom-bedside-lamp-knit-poufs-thumb.webp",
-    "room": "bedrooms",
+    "room": "rose-room",
     "name": "rose-bedroom-bedside-lamp-knit-poufs",
     "width": 2000,
     "height": 1333,
@@ -605,5 +605,15 @@
     "height": 1600,
     "caption": "Fire-pit evenings beside the pool",
     "alt_text": "Lit round fire pit surrounded by blue Adirondack chairs with pink-patterned pillows, with the pool, Bogey putting flag, string-lit patio and hot tub beyond."
+  },
+  {
+    "src": "/assets/photos/living-room/futon-olive-closeup.webp",
+    "thumb": "/assets/photos/living-room/futon-olive-closeup-thumb.webp",
+    "room": "futon",
+    "name": "futon-olive-closeup",
+    "width": 1320,
+    "height": 1200,
+    "caption": "The olive living-room futon",
+    "alt_text": "Olive-gray futon with olive and navy chevron pillows against a blue wall in the living room."
   }
 ]
