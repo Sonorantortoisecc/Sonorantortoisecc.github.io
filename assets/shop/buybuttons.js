@@ -9,7 +9,9 @@
     { id: '15493272011002', nodeId: 'product-component-paddle' },
     { id: '15493316673786', nodeId: 'product-component-towel' },
     { id: '15495942570234', nodeId: 'product-component-socks' },
-    { id: '15496193376506', nodeId: 'product-component-trunks' }
+    { id: '15496193376506', nodeId: 'product-component-trunks' },
+    { id: '15496753709306', nodeId: 'product-component-mens-polo' },
+    { id: '15496734310650', nodeId: 'product-component-womens-polo' }
   ];
 
   var productOptions = {
