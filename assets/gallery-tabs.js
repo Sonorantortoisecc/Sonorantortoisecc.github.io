@@ -3,7 +3,7 @@
  const tabs=[...document.querySelectorAll('[data-gallery-tab]')];
  if(!tabs.length)return;
  const panels=[...document.querySelectorAll('.gallery-panel')];
- const byRoom={exterior:'outside','the-fore':'outside',pool:'outside','hot-tub':'outside','outdoor-mini-golf':'outside','outdoor-games':'outside','fire-pit':'outside','patio-bar':'outside',grill:'outside','sport-court':'outside','patio-dining':'outside','patio-sound':'outside','living-room':'inside',dining:'inside',kitchen:'inside',bedrooms:'inside','primary-retreat':'inside','rose-room':'inside','desert-blues':'inside','bunk-room':'inside',futon:'inside',bathrooms:'inside','game-room':'inside','indoor-mini-golf':'inside',laundry:'inside'};
+ const byRoom={exterior:'outside','the-fore':'outside',pool:'outside','hot-tub':'outside','outdoor-mini-golf':'outside','outdoor-games':'outside','fire-pit':'outside','patio-bar':'outside',grill:'outside','sport-court':'outside','patio-dining':'outside','patio-lounge':'outside','living-room':'inside',dining:'inside',kitchen:'inside',bedrooms:'inside','primary-retreat':'inside','rose-room':'inside','desert-blues':'inside','bunk-room':'inside',futon:'inside',bathrooms:'inside','game-room':'inside','indoor-mini-golf':'inside',laundry:'inside'};
  let activeRoom=null;
  function itemMatches(f,roomFilter){
   if(!roomFilter)return true;
