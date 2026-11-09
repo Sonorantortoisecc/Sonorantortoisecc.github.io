@@ -1,2 +1,8 @@
-/*
+/guide/*
+  X-Robots-Tag: noindex, nofollow
+/shop/*
+  X-Robots-Tag: noindex, nofollow
+/preview-booking/*
+  X-Robots-Tag: noindex, nofollow
+/preview-assistant/*
   X-Robots-Tag: noindex, nofollow

@@ -1,2 +1,5 @@
 User-agent: *
-Disallow: /
+Disallow: /preview-booking/
+Disallow: /preview-assistant/
+
+Sitemap: https://www.sonorancountryclub.com/sitemap.xml
