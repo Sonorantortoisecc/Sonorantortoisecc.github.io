@@ -248,7 +248,8 @@
         var style = doc.createElement('style');
         style.id = 'scc-line-price-style';
         style.textContent =
-          '.shopify-buy__cart-item__price{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:flex-end;gap:8px;}' +
+          '.shopify-buy__cart-item__price{display:flex!important;flex-wrap:wrap;align-items:baseline;justify-content:flex-end;gap:8px;float:none!important;width:100%!important;max-width:100%!important;margin-top:6px;clear:both;}' +
+          '.shopify-buy__quantity-container,.shopify-buy__cart-item__quantity-container{display:inline-flex!important;flex-wrap:nowrap!important;align-items:center;white-space:nowrap!important;float:none!important;}' +
           '.scc-unit-price{font-weight:400;opacity:.85;}' +
           '.scc-line-total{font-weight:600;}';
         (doc.head || doc.documentElement).appendChild(style);
